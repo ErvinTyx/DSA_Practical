@@ -178,8 +178,10 @@ public class RecordResults extends javax.swing.JFrame {
       jtfNumber.grabFocus();
       
       for (int i = 0; i < finisherList.size(); i++) {
-          
-          
+          if(runner.getNumber() ==finisherList.get(i).getNumber()){
+              JOptionPane.showMessageDialog(null, "Number Previously filled in","ERROR",JOptionPane.ERROR_MESSAGE);
+              return;
+          }
       }
       
       
