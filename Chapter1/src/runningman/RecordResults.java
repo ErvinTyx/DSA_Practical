@@ -173,14 +173,32 @@ public class RecordResults extends javax.swing.JFrame {
   }//GEN-LAST:event_jbtAddActionPerformed
 
   private void jbtConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtConfirmActionPerformed
-
+      jtfNumber.setText("");
+      jtfName.setText("");
+      jtfNumber.grabFocus();
+      
+      for (int i = 0; i < finisherList.size(); i++) {
+          
+          
+      }
+      
+      
+      runner.setFinishPosition(currentPosition++);
+      finisherList.add(runner);
+      jtaResults.setText(formatFinisherList());
+      jtfCurrentPosition.setText(""+currentPosition);
+      
   }//GEN-LAST:event_jbtConfirmActionPerformed
 
   private void jtfCurrentPositionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCurrentPositionActionPerformed
   }//GEN-LAST:event_jtfCurrentPositionActionPerformed
 
   private void jtfNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumberActionPerformed
+    int number = Integer.parseInt(jtfNumber.getText());
+    int runnerIndex = runnerList.indexOf(new Runner(number));
     
+    runner = runnerList.get(runnerIndex);
+    jtfName.setText(runner.getName());
   }//GEN-LAST:event_jtfNumberActionPerformed
 
   private void initializeList() {
