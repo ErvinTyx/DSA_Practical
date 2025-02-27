@@ -1,0 +1,45 @@
+ADT Fraction
+Raional fractions are of th form a/b, where a and b are integers and b != 0.
+
+setNumerator(Integer numerator)
+	Description :sets this faction's numerator with the given value 
+	Postcondition :this faction's numerator has been set with the given value
+
+Boolean setDenominator(Integer denominator)
+	Description :set this faction's denominator with the given value
+	Pre-condition : the given value cannt be 0
+        Postcondition :this faction's denominator has been set with the given value
+	Return: true if this faction's denominator was successfully set with the given value otherwise false
+
+Integer getNumerator()
+	Description :retrieve this faction's numerator value
+        Postcondition :this faction remains unchanged
+        Return  :this faction's numerator value
+
+Integer getDenominator()
+ 	Description :retrieve this fraction's denominator value
+        Postcondition :this faction remains unchanged
+        Return  :this fraction's denominator value
+
+
+add(Fraction anotherFaction)
+ 	Description :add this faction and the given fraction
+        Postcondition :this faction remains unchanged
+        Return  :the result of adding this fraction and the given fraction
+
+subtract(Fraction anotherFaction)
+	Description :subtracts this faction and the given fraction
+        Postcondition : this factions remains unchaged
+        Return  :
+multiply
+	Description :
+        Precondition :
+        Postcondition :
+        Return  :
+divide
+	Description :
+        Precondition :
+        Postcondition :
+        Return  :
+
+

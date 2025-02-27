@@ -1,0 +1,4 @@
+makeEmpty(Integer m)
+	Description : set the first m rows and columns to zero
+	Pre-condition : m value has to be equal or less than n value but more than 0
+	Post-condition :

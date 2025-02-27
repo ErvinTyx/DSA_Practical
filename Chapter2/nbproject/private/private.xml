@@ -2,6 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/PortableGit/DSA_Practical/Chapter2/src/matrix/MatrixDriver.java</file>
+            <file>file:/E:/PortableGit/DSA_Practical/Chapter2/src/matrix/SquareMatrix.java</file>
+            <file>file:/E:/PortableGit/DSA_Practical/Chapter2/src/matrix/MatrixInterface.java</file>
+        </group>
     </open-files>
 </project-private>

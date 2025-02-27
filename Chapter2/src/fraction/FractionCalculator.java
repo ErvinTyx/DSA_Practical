@@ -1,16 +1,34 @@
 package fraction;
 
+import javax.swing.JOptionPane;
+
 /**
  * FractionCalculator.java A client class that simulates a simple calculator.
  * @author Kat Tan
  * @version 1.0
  */
 public class FractionCalculator extends javax.swing.JFrame {
-
+    private FractionInterface fraction1 = new Fraction();
+    private FractionInterface fraction2 = new Fraction();
+    
   public FractionCalculator() {
     initComponents();
   }
 
+  private void getInput(){
+      fraction1.setNumerator(Integer.parseInt(jtfNumerator1.getText()));
+      fraction1.setDenominator(Integer.parseInt(jtfDenominator1.getText()));
+      fraction2.setNumerator(Integer.parseInt(jtfNumerator2.getText()));
+      fraction2.setDenominator(Integer.parseInt(jtfDenominator2.getText()));
+  }
+  
+  private boolean getCheckInput(){
+      fraction1.setNumerator(Integer.parseInt(jtfNumerator1.getText()));
+      boolean de1 = fraction1.setDenominator(Integer.parseInt(jtfDenominator1.getText()));
+      fraction2.setNumerator(Integer.parseInt(jtfNumerator2.getText()));
+      boolean de2 = fraction2.setDenominator(Integer.parseInt(jtfDenominator2.getText()));
+      return de1 && de2;
+  }
   @SuppressWarnings("unchecked")
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
@@ -178,18 +196,47 @@ public class FractionCalculator extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
   
   private void jbtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtAddActionPerformed
+    if(getCheckInput()){
+        FractionInterface resultFraction = fraction1.add(fraction2);
+        String resultStr = fraction1 +  " + "+ fraction2 + " = "+ resultFraction;
+        jtfResult.setText(resultStr);
+    }else{
+        JOptionPane.showMessageDialog(null, "Cannot have denominator with value 0", "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
     
   }//GEN-LAST:event_jbtAddActionPerformed
 
   private void jbtSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtSubtractActionPerformed
+    if(getCheckInput()){
+        FractionInterface resultFraction = fraction1.sub(fraction2);
+        String resultStr = fraction1 +  " - "+ fraction2 + " = "+ resultFraction;
+        jtfResult.setText(resultStr);
+    }else{
+        JOptionPane.showMessageDialog(null, "Cannot have denominator with value 0", "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
     
   }//GEN-LAST:event_jbtSubtractActionPerformed
 
   private void jbtMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtMultiplyActionPerformed
+    if(getCheckInput()){
+        FractionInterface resultFraction = fraction1.mul(fraction2);
+        String resultStr = fraction1 +  " * "+ fraction2 + " = "+ resultFraction;
+        jtfResult.setText(resultStr);
+    }else{
+        JOptionPane.showMessageDialog(null, "Cannot have denominator with value 0", "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
     
   }//GEN-LAST:event_jbtMultiplyActionPerformed
 
   private void jbtDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtDivideActionPerformed
+
+    if(getCheckInput()){
+        FractionInterface resultFraction = fraction1.div(fraction2);
+        String resultStr = fraction1 +  " / "+ fraction2 + " = "+ resultFraction;
+        jtfResult.setText(resultStr);
+    }else{
+        JOptionPane.showMessageDialog(null, "Cannot have denominator with value 0", "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
     
   }//GEN-LAST:event_jbtDivideActionPerformed
 
