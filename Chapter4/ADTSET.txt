@@ -1,0 +1,32 @@
+boolean add(T element)
+Description : add new a element to set
+Precondition: newElement does not yet exist in this set
+Post condition: newElement has been added to the set
+Return: true is newElement was successfully added to this set; false otherwise
+
+boolean remove(T an ELement)
+Description : Remove  an element from the set
+Precondition: the given element from the set
+PostCondition: the given element has been removed from the set
+Return: true if the given element is in the set and remove, false otherwise
+
+
+boolean checkSubset(Set anotherSet)
+Description: Check is another set is a subset of the current set
+Precondition 
+PostCondition: this set remains unchanged 
+Return : true is the given set
+
+union(Set anotherSet)
+Description:Add another set the current set
+Post-condition: this set has all the elements of another set and currentSet
+
+Set intersection(Set anotherSet)
+Description:Returns a set with elements that are common in both the current set and the given set
+Post-condition:
+Return:
+
+boolean isEmpty()
+Description
+Postcondition
+Return

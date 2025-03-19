@@ -27,6 +27,10 @@ public class ArrayList<T> implements ListInterface<T>, Serializable {
 
   @Override
   public boolean add(T newEntry) {
+    if(isArrayFull()){
+        doubleArray();
+    }  
+    
     array[numberOfEntries] = newEntry;
     numberOfEntries++;
     return true;
@@ -116,7 +120,8 @@ public class ArrayList<T> implements ListInterface<T>, Serializable {
 
   @Override
   public boolean isFull() {
-    return numberOfEntries == array.length;
+    return false;
+            //numberOfEntries == array.length;
   }
 
   @Override
@@ -160,4 +165,20 @@ public class ArrayList<T> implements ListInterface<T>, Serializable {
       array[index] = array[index + 1];
     }
   }
+  
+  private boolean isArrayFull(){
+      return numberOfEntries == array.length;
+  }
+  
+  private void doubleArray(){
+      T[] oldArray = array; //duplicate array elements
+      array = (T[]) new Object[2 * oldArray.length];
+      
+      //copy back the elements
+      System.arraycopy(oldArray, 0, array, 0, numberOfEntries);
+      
+      //for(int i = 0; i < numberOfEntries; i++){
+      //    array[i] = oldArray[i];
+          
+    }
 }
