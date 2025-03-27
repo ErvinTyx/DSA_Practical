@@ -39,7 +39,7 @@ public class CircularLinkedQueue<T> implements QueueInterface<T>{
     public T dequeue() {
         T frontElement =null;
         if(!isEmpty()){
-            frontElement = lastNode.next.next.data;
+            frontElement = lastNode.next.data;
             lastNode = lastNode.next;
         }
         if (lastNode.next == lastNode){
