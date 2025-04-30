@@ -18,6 +18,7 @@ public class BubbleSort {
       System.out.print("After pass " + pass + ": ");  // trace statement
       display(a, n);                                  // trace statement
     } 
+    // added comment
   } 
 
   // helper method to swap values in two array elements
